@@ -22,7 +22,7 @@ from llama_index.core.agent import ReActAgent
 from llama_index.llms.openllm import OpenLLM
 from llm.chat_llm import chat
 from service.add_citation import add_citation_with_retrieved_node
-from streamlit.runtime.scriptrunner.script_run_context import (
+from streamlit.runtime.scriptrunner_utils.script_run_context import (
     add_script_run_ctx,
     get_script_run_ctx,
 )
