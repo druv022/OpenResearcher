@@ -93,6 +93,25 @@ docker run -p 6333:6333 -p 6334:6334 \
 For more Qdrant installation details, you can follow this [link](https://qdrant.tech/documentation/quickstart/).
 
 
+##### Install Elasticsearch engine locally:
+
+Create a Docker network:
+
+```sh
+docker network create elastic-net
+```
+
+Then start the Elasticsearch container:
+
+```sh
+docker run -p 127.0.0.1:9200:9200 -d --name elasticsearch --network elastic-net \
+  -e "discovery.type=single-node" \
+  -e "xpack.security.enabled=false" \
+  -e "xpack.license.self_generated.type=trial" \
+  docker.elastic.co/elasticsearch/elasticsearch:8.15.1
+```
+For more Elasticsearch details, you can follow this [link](https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html)
+
 
 ### 🤖 Supported models
 
