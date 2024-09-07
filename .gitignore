@@ -3,3 +3,6 @@ test*.py
 aws.txt
 test_dir/
 *.ipynb
+data/arxiv-metadata-oai-snapshot.json
+.vscode/*
+qdrant_storage/*
